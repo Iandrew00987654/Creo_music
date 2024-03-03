@@ -27,7 +27,7 @@ const Wavelight='/Wavelight.jpg';
         <Navbar />
     </div>
 
-    <body class="dark:bg-slate-800 ">
+    <body class="bg-slate-800 ">
         <div class="flex  flex-col lg:flex-row w-full  lg:pt-5 items-center lg:justify-around ">
 
             <div class="w-72 shadow-md shadow-slate-500 mb-10 mt-10 lg:mb-5  lg:ml-5 lg:mr-0 lg:mt-0 hover:shadow-none">

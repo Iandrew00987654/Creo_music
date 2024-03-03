@@ -38,7 +38,7 @@ const Mando = '/mando.png';
       </div>
     </nav>
     <div id="menu-backdrop" class=" 
-      absolute dark:bg-slate-800 backdrop-blur-lg rounded
+      absolute bg-slate-800 backdrop-blur-lg rounded
       translate-x-[var(--left)] translate-y-[var(--top)]
       left-0 top-
       w-[var(--width)] h-[var(--height)]

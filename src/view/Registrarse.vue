@@ -14,7 +14,7 @@ const usuario = ref('')
         <Navbar />
     </div>
 
-    <body class="dark:bg-slate-800 flex flex-col lg:flex-row">
+    <body class="bg-slate-800 flex flex-col lg:flex-row">
         <!-- <div class="h-screen">
             <Pregunta />
         </div> -->

@@ -8,7 +8,7 @@ const main = '/Red-haze.jpeg';
         <Navbar />
     </div>
 
-    <body class="dark:bg-slate-800 ">
+    <body class="bg-slate-800 ">
         <div class="flex flex-col lg:flex-row w-full p-10 ">
             <img class="w-full lg:w-1/2 shadow-md shadow-slate-500 rounded-md" :src="main" alt="main">
             <div class="w-full lg:w-1/2 pt-10 lg:px-10 ">
