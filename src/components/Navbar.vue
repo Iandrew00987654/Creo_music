@@ -2,17 +2,36 @@
 import { ref } from 'vue'
 
 const show = ref(false);
-const imgCreo = 'src/assets/Creo.jpg';
+const imgCreo = '/Creo.jpg';
+const Github = '/Github.png';
+const Mando = '/mando.png';
 </script>
 
 <template>
   <header class="flex w-full h-20">
     <img class="rounded-full border border-slate-400 m-3" :src="imgCreo" alt="imgCreo" />
     <nav class="w-full h-full">
-      <ul id="landing-header" class="hidden lg:flex  justify-start items-center h-full">
-        <li><router-link to="/" class="text-white text-base mx-8">Inicio</router-link></li>
-        <li><router-link to="/canciones" class="text-white text-base mx-8">Canciones</router-link></li>
-        <li><router-link to="/registrarse" class="text-white text-base mx-8">Registrate</router-link></li>
+      <ul id="landing-header" class="hidden lg:flex  justify-between items-center h-full">
+        <div class="flex items-center">
+          <li><router-link to="/" class="text-white text-lg mx-8">Inicio</router-link></li>
+          <li><router-link to="/canciones" class="text-white text-lg mx-8">Canciones</router-link></li>
+          <li><router-link to="/registrarse" class="text-white text-lg mx-8">Registrate</router-link></li>
+        </div>
+        <div class="flex items-center">
+          <li class="text-4xl animate-fade-right px-5 text-gray-700 ">|</li>
+          <li class="px-5">
+            <a href="https://github.com/Iandrew00987654/Creo_music/tree/master" target="_blank">
+              <img :src="Github" alt="Github"
+                class="w-12 rounded-full animate-fade-right animate-duration-[900ms] animate-ease-out">
+            </a>
+          </li>
+          <li class="pr-5">
+            <a href="https://creogame.netlify.app/" target="_blank">
+              <img :src="Mando" alt="Mando" 
+                class="w-12 rounded-full animate-fade-right animate-duration-[900ms] animate-ease-out opacity-80	border border-red-50 box-border">
+            </a>
+          </li>
+        </div>  
       </ul>
       <div class="flex lg:hidden justify-end h-full items-center ">
         <button @click="show = !show" class="text-4xl rounded-full self-center px-3 ">☰</button>
@@ -26,7 +45,7 @@ const imgCreo = 'src/assets/Creo.jpg';
       transition-all duration-500
       ease-in-out opacity-0 -z-10
       ">
-      </div>
+    </div>
   </header>
 
 
@@ -34,9 +53,9 @@ const imgCreo = 'src/assets/Creo.jpg';
   <transition name="slide-fade">
     <div v-if="show" class="flex-col lg:hidden border-t-2 border-stone-700 ">
       <ul>
-        <li class="text-white text-base mx-5 py-1">Inicio</li>
-        <li class="text-white text-base mx-5 py-1">Canciones</li>
-        <li class="text-white text-base mx-5 py-1">Registrate</li>
+        <li><router-link to="/" class="text-white text-base mx-5 ">Inicio</router-link></li>
+        <li><router-link to="/canciones" class="text-white text-base mx-5 ">Canciones</router-link></li>
+        <li><router-link to="/registrarse" class="text-white text-base mx-5 ">Registrate</router-link></li>
       </ul>
     </div>
   </transition>
@@ -74,6 +93,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
